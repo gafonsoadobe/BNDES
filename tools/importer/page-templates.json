@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "site",
+      "urls": [
+        "https://www.bndes.gov.br/wps/portal/site/home"
+      ],
+      "representativeUrl": "https://www.bndes.gov.br/wps/portal/site/home",
+      "description": "BNDES homepage: hero rotator, text highlights, featured image cards, dark-blue image highlights and icon quick links",
+      "urlPattern": "/wps/portal/site/*",
+      "blocks": [
+        {
+          "name": "carousel-hero",
+          "instances": [
+            "#cd-slider",
+            ".cd-slider-wrapper > ul.cd-slider"
+          ]
+        },
+        {
+          "name": "cards-text",
+          "instances": [
+            "#destaque-texto > .section > .row"
+          ]
+        },
+        {
+          "name": "cards-featured",
+          "instances": [
+            "#owl-carrousel",
+            ".container-bndes-carrossel > .owl-carousel"
+          ]
+        },
+        {
+          "name": "cards-horizontal",
+          "instances": [
+            "#destaque-imagens > .container > .row"
+          ]
+        },
+        {
+          "name": "cards-icon",
+          "instances": [
+            "#destaque-botoes > .container.setores",
+            ".container.setores"
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "1",
+          "name": "hero-banner",
+          "selector": [
+            "#index-banner",
+            ".cd-slider-wrapper"
+          ],
+          "style": null,
+          "blocks": [
+            "carousel-hero"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "2",
+          "name": "text-highlights",
+          "selector": [
+            "#destaque-texto"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-text"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "3",
+          "name": "featured-cards",
+          "selector": [
+            "section#w",
+            "#owlmy"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-featured"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "4",
+          "name": "image-highlights",
+          "selector": [
+            "#destaque-imagens"
+          ],
+          "style": "dark-blue",
+          "blocks": [
+            "cards-horizontal"
+          ],
+          "defaultContent": []
+        },
+        {
+          "id": "5",
+          "name": "quick-links",
+          "selector": [
+            "#destaque-botoes"
+          ],
+          "style": null,
+          "blocks": [
+            "cards-icon"
+          ],
+          "defaultContent": []
+        }
+      ]
+    }
+  ]
+}

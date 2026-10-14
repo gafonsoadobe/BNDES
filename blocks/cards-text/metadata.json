@@ -1,0 +1,23 @@
+{
+  "variantName": "cards-text",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "purpose": "text navigation highlights",
+    "imagePattern": "noimg",
+    "structure": "heading + text + link",
+    "layout": "3 columns"
+  },
+  "contentPattern": "Each row = 1 cell: h3 title (linked) + paragraph",
+  "usage": {
+    "pagesUsing": [
+      "https://www.bndes.gov.br/wps/portal/site/home"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": []
+}

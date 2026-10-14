@@ -1,0 +1,23 @@
+{
+  "variantName": "cards-featured",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "moderate",
+    "purpose": "featured programs",
+    "imagePattern": "square image top",
+    "structure": "image + heading + text + link",
+    "layout": "4 columns, accent bar under image, grey text panel"
+  },
+  "contentPattern": "Each row: cell1 image; cell2 h3 title (linked) + paragraph",
+  "usage": {
+    "pagesUsing": [
+      "https://www.bndes.gov.br/wps/portal/site/home"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": []
+}

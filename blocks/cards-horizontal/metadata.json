@@ -1,0 +1,23 @@
+{
+  "variantName": "cards-horizontal",
+  "baseBlock": "cards",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "moderate",
+    "purpose": "institutional highlights",
+    "imagePattern": "small landscape image left",
+    "structure": "image + heading + text + link",
+    "layout": "2 columns, image beside text"
+  },
+  "contentPattern": "Each row: cell1 image; cell2 h3 title (linked) + paragraph",
+  "usage": {
+    "pagesUsing": [
+      "https://www.bndes.gov.br/wps/portal/site/home"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": []
+}

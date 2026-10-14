@@ -1,0 +1,21 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "canonicalModel": "standalone",
+  "visualCharacteristics": {
+    "colorScheme": "dark-overlay",
+    "density": "spacious",
+    "purpose": "homepage hero rotator",
+    "imagePattern": "full-bleed background",
+    "structure": "image + heading + text + link",
+    "layout": "full-width, text in blue overlay box at left"
+  },
+  "contentPattern": "Each row = slide: cell1 background image; cell2 h2 title + paragraph + link (slide href)",
+  "usage": {
+    "pagesUsing": ["https://www.bndes.gov.br/wps/portal/site/home"],
+    "reuseCount": 1,
+    "lastUsed": "2026-10-14"
+  },
+  "options": [],
+  "memberVariantIds": []
+}

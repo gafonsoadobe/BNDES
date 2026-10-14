@@ -1,0 +1,44 @@
+.cards-icon > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cards-icon .cards-icon-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.cards-icon .cards-icon-image {
+  line-height: 0;
+}
+
+.cards-icon .cards-icon-image img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.cards-icon .cards-icon-body > * {
+  margin: 0;
+}
+
+/* whole tile clickable when it holds a single link */
+.cards-icon .cards-icon-linked a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+@media (width >= 900px) {
+  .cards-icon > ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

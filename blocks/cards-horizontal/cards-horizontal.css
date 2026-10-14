@@ -1,0 +1,53 @@
+.cards-horizontal > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+/* image beside text */
+.cards-horizontal .cards-horizontal-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 16px;
+  align-items: start;
+}
+
+.cards-horizontal .cards-horizontal-item > :only-child {
+  grid-column: 1 / -1;
+}
+
+.cards-horizontal .cards-horizontal-image {
+  line-height: 0;
+}
+
+.cards-horizontal .cards-horizontal-image img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.cards-horizontal .cards-horizontal-body > :first-child {
+  margin-top: 0;
+}
+
+.cards-horizontal .cards-horizontal-body > :last-child {
+  margin-bottom: 0;
+}
+
+/* whole card clickable when it holds a single link */
+.cards-horizontal .cards-horizontal-linked a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+@media (width >= 900px) {
+  .cards-horizontal > ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
