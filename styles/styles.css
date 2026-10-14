@@ -37,7 +37,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav heights */
-  --nav-height: 64px;
+  --nav-height: 189px;
   --breadcrumbs-height: 34px;
   --header-height: var(--nav-height);
 }
@@ -69,6 +69,9 @@
     --heading-font-size-m: 22px;
     --heading-font-size-s: 20px;
     --heading-font-size-xs: 18px;
+
+    /* nav heights */
+    --nav-height: 201px;
   }
 }
 
