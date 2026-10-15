@@ -1,0 +1,11 @@
+/* Brand Concierge web agent mount */
+.brand-concierge {
+  padding: 40px 0;
+}
+
+/* card images rendered by the Adobe agent (class name is Adobe's, kept global as in the snippet) */
+/* stylelint-disable-next-line selector-class-pattern */
+.bc-card__image {
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}

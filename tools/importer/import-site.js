@@ -11,6 +11,7 @@ import cardsIconParser from './parsers/cards-icon.js';
 // TRANSFORMER IMPORTS
 import bndesCleanupTransformer from './transformers/bndes-cleanup.js';
 import bndesSectionsTransformer from './transformers/bndes-sections.js';
+import bndesBrandConciergeTransformer from './transformers/bndes-brand-concierge.js';
 
 // PARSER REGISTRY
 const parsers = {
@@ -98,6 +99,7 @@ const PAGE_TEMPLATE = {
 const transformers = [
   bndesCleanupTransformer,
   ...(PAGE_TEMPLATE.sections && PAGE_TEMPLATE.sections.length > 1 ? [bndesSectionsTransformer] : []),
+  bndesBrandConciergeTransformer,
 ];
 
 // The portal serves every page under this prefix; the site home is the prefix itself.
