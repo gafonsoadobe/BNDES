@@ -1,33 +1,72 @@
+/* cards-icon: quick service links (source: #destaque-botoes .container.setores) */
+.cards-icon {
+  padding: 60px 0 20px;
+}
+
 .cards-icon > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 0;
 }
 
 .cards-icon .cards-icon-item {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  min-height: 160px;
+  margin: 0 0 30px;
+  padding: 0;
   text-align: center;
-  gap: 8px;
 }
 
 .cards-icon .cards-icon-image {
   line-height: 0;
 }
 
+.cards-icon .cards-icon-image picture {
+  display: block;
+}
+
+/*
+ * The source inlines its SVG icons and colors them with fill: rgb(0 87 130).
+ * Here the icons are cross-origin <img> SVGs with no fill (they render black)
+ * and no CORS headers, so mask-image cannot be used. Recolor with a filter:
+ * brightness(0) normalizes any icon to black, the rest maps black to
+ * exactly rgb(0 87 130) (--brand-blue), verified by sampling rendered pixels.
+ */
 .cards-icon .cards-icon-image img {
-  width: 64px;
-  height: 64px;
+  display: block;
+  width: 70px;
+  height: 70px;
+  max-width: 70px;
+  max-height: 70px;
+  margin: 0 auto 5px;
   object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(21%) sepia(92%) saturate(1332%) hue-rotate(174deg) brightness(95%) contrast(102%);
 }
 
 .cards-icon .cards-icon-body > * {
   margin: 0;
+}
+
+.cards-icon .cards-icon-body h3 {
+  font-size: var(--heading-font-size-s);
+  font-weight: 400;
+  line-height: 19.8px;
+  color: var(--brand-blue);
+}
+
+.cards-icon .cards-icon-body a:any-link,
+.cards-icon .cards-icon-body a:hover {
+  color: var(--brand-blue);
+  text-decoration: none;
+}
+
+/* keep the site-wide high-contrast toggle working (global rule is less specific) */
+body.alto-contraste .cards-icon .cards-icon-body h3,
+body.alto-contraste .cards-icon .cards-icon-body a:any-link {
+  color: #ff0;
 }
 
 /* whole tile clickable when it holds a single link */
@@ -37,7 +76,7 @@
   inset: 0;
 }
 
-@media (width >= 900px) {
+@media (width >= 570px) {
   .cards-icon > ul {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }

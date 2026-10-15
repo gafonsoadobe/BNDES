@@ -1,0 +1,17 @@
+/* BNDES brand tokens, extracted from www.bndes.gov.br */
+:root {
+  --heading-font-family: 'Fira Sans', arial, sans-serif;
+  --body-font-family: 'Fira Sans', arial, sans-serif;
+
+  /* hero titles use the BNDES brand font when available */
+  --display-font-family: themix, 'Fira Sans', arial, sans-serif;
+  --background-color: #fff;
+  --text-color: #222;
+  --text-muted-color: #333;
+  --link-color: #10498f;
+  --link-hover-color: #05386b;
+  --brand-green: #00856c;
+  --brand-blue: #005782;
+  --brand-blue-dark: #00527a;
+  --brand-menu-green: #00753b;
+}

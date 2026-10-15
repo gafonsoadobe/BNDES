@@ -1,6 +1,8 @@
 import { createOptimizedPicture, fetchPlaceholders } from '../../scripts/aem.js';
 
-const AUTOPLAY_DELAY = 6000;
+// source slider rotates every 5s (data-autoslide="5")
+const AUTOPLAY_DELAY = 5000;
+const CHEVRON_DOWN = '<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.41 8.58 12 13.17l4.59-4.59L18 10l-6 6-6-6z"/></svg>';
 let carouselHeroId = 0;
 
 function setActive(block, index) {
@@ -175,6 +177,21 @@ export default async function decorate(block) {
     nav.append(indicators);
     container.append(nav);
     block.classList.add('carousel-hero-multi');
+  }
+
+  // green band with a chevron that scrolls past the hero to the next section
+  const next = block.closest('.section')?.nextElementSibling;
+  if (next) {
+    const cont = document.createElement('button');
+    cont.type = 'button';
+    cont.className = 'carousel-hero-continue';
+    cont.setAttribute('aria-label', placeholders.carouselScrollDown || 'Clique para rolar a página');
+    cont.innerHTML = CHEVRON_DOWN;
+    cont.addEventListener('click', () => {
+      const smooth = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      next.scrollIntoView({ behavior: smooth ? 'smooth' : 'auto', block: 'start' });
+    });
+    container.append(cont);
   }
 
   setActive(block, 0);
