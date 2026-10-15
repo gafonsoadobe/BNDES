@@ -1,20 +1,176 @@
-footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+/* BNDES footer: contact / quick links / social + help, then copyright bar */
+footer .footer {
+  font-family: 'Fira Sans', arial, sans-serif;
+  font-size: 16.5px;
+  line-height: 16.5px;
+  color: #fff;
 }
 
-footer .footer > div {
-  margin: auto;
-  max-width: 1200px;
-  padding: 40px 24px 24px;
+footer .footer-main {
+  padding-top: 30px;
+  background-color: #005782;
+}
+
+footer .footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer .footer-main .footer-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 41px;
+}
+
+footer .footer-column {
+  box-sizing: border-box;
+  margin-bottom: 18px;
+  padding: 0 11.25px;
+}
+
+footer .footer h2 {
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #fff;
+}
+
+footer .footer h2 img {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin: -5px 5px 0 0;
+}
+
+footer .footer a:any-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .footer a:hover {
+  color: #d7d8d6;
+  text-decoration: underline;
 }
 
 footer .footer p {
   margin: 0;
 }
 
+footer .footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* contact column */
+footer .footer-column-contact .footer-item {
+  margin-bottom: 18px;
+}
+
+/* each source block ends with an empty text line, kept as bottom space */
+footer .footer-column-contact .footer-item:not(:has(p)) {
+  margin-bottom: 47px;
+}
+
+footer .footer-column-contact p {
+  margin: 13.5px 0 0 37.5px;
+  padding-bottom: 17px;
+  color: #f5f5f5;
+}
+
+/* quick links: two columns */
+footer .footer-column-links ul {
+  margin: 3.5px 0 21.5px;
+  column-count: 2;
+  font-size: 13.75px;
+  line-height: 34.375px;
+}
+
+/* row rhythm comes from padding so wrapped labels keep tight line spacing */
+footer .footer-column-links li {
+  padding: 8.6875px 0;
+  line-height: 17px;
+  break-inside: avoid;
+}
+
+/* social + help */
+footer .footer-column-extra ul {
+  margin: 15px 0;
+}
+
+footer .footer-column-extra li + li {
+  margin-top: 18px;
+}
+
+/* copyright bar */
+footer .footer-copyright {
+  display: flex;
+  align-items: center;
+  min-height: 50px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  background-color: #00527a;
+}
+
 @media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+  footer .footer {
+    font-size: 15px;
+    line-height: normal;
+  }
+
+  footer .footer-column {
+    margin-bottom: 0;
+  }
+
+  footer .footer-column-contact .footer-item {
+    margin-bottom: 22.5px;
+  }
+
+  footer .footer-column-contact .footer-item:not(:has(p)) {
+    margin-bottom: 53px;
+  }
+
+  footer .footer-column-contact p {
+    font-size: 13.5px;
+  }
+
+  footer .footer-column-links ul {
+    margin: 12.5px 0;
+    font-size: 12.5px;
+    line-height: 31.25px;
+  }
+
+  footer .footer-column-links li {
+    padding: 8.125px 0;
+    line-height: 15px;
+  }
+
+  footer .footer-column-extra li + li {
+    margin-top: 0;
+  }
+
+  footer .footer-container {
+    width: 70%;
+  }
+
+  footer .footer-main .footer-container {
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  footer .footer-column-contact {
+    width: 33.333%;
+  }
+
+  footer .footer-column-links {
+    width: 50%;
+  }
+
+  footer .footer-column-extra {
+    width: 16.667%;
   }
 }
